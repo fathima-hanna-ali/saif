@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>libraryapp</title>
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Google Fonts Roboto -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Material Design Bootstrap -->
+  <link rel="stylesheet" href="css/mdb.min.css">
+  <!-- Your custom styles (optional) -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+	 a{
+         color:white;
+     } 
+
+	 .myButton {
+	box-shadow: 0px 1px 0px 0px #f0f7fa;
+	background:linear-gradient(to bottom, #33bdef 5%, #019ad2 100%);
+	background-color:#33bdef;
+	border-radius:6px;
+	border:1px solid #057fd0;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:13px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #5b6178;
+	}
+	.myButton:hover {
+		background:linear-gradient(to bottom, #019ad2 5%, #33bdef 100%);
+		background-color:#019ad2;
+	}
+	.myButton:active {
+		position:relative;
+		top:1px;
+	}
+
+	/* Solid border */
+	hr.solid {
+	border-top: 0.5px solid #bbb;
+	}
+
+	.label {
+	color:#333745;
+	padding: 3px;
+	font-family: 'Roboto Condensed';
+	font-weight: bold;
+	}
+
+    .other {background-color:#333745; color: white;} /* Gray */
+    .login { 
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	margin: -150px 0 0 -150px;
+	width:100px;
+	height:100px;
+}
+.txt2 {
+    font-family: Poppins-Regular;
+    font-size: 15px;
+    color: #0351f8;
+    line-height: 1.4;
+    text-decoration: null;
+  }
+  .btn { display: inline-block; *display: inline; *zoom: 1; padding: 4px 10px 4px; margin-bottom: 0; font-size: 13px; line-height: 18px; color: #333333; text-align: center;text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75); vertical-align: middle; background-color: #f5f5f5; background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6); background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6)); background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6); background-image: -o-linear-gradient(top, #ffffff, #e6e6e6); background-image: linear-gradient(top, #ffffff, #e6e6e6); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#ffffff, endColorstr=#e6e6e6, GradientType=0); border-color: #e6e6e6 #e6e6e6 #e6e6e6; border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25); border: 1px solid #e6e6e6; -webkit-border-radius: 4px; -moz-border-radius: 4px; border-radius: 4px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05); cursor: pointer; *margin-left: .3em; }
+.btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] { background-color: #e6e6e6; }
+.btn-large { padding: 9px 14px; font-size: 15px; line-height: normal; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; }
+.btn:hover { color: #333333; text-decoration: none; background-color: #e6e6e6; background-position: 0 -15px; -webkit-transition: background-position 0.1s linear; -moz-transition: background-position 0.1s linear; -ms-transition: background-position 0.1s linear; -o-transition: background-position 0.1s linear; transition: background-position 0.1s linear; }
+.btn-primary, .btn-primary:hover { text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25); color: #ffffff; }
+.btn-primary.active { color: rgba(255, 255, 255, 0.75); }
+.btn-primary { background-color: #4a77d4; background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4); background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4); background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#6eb6de), to(#4a77d4)); background-image: -webkit-linear-gradient(top, #6eb6de, #4a77d4); background-image: -o-linear-gradient(top, #6eb6de, #4a77d4); background-image: linear-gradient(top, #6eb6de, #4a77d4); background-repeat: repeat-x; filter: progid:dximagetransform.microsoft.gradient(startColorstr=#6eb6de, endColorstr=#4a77d4, GradientType=0);  border: 1px solid #3762bc; text-shadow: 1px 1px 1px rgba(0,0,0,0.4); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.5); }
+.btn-primary:hover, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] { filter: none; background-color: #4a77d4; }
+.btn-block { width: 50%; display:block; }
+
+.heading{
+    margin-right: 50%;
+}
+
+
+
+
+  </style>
+</head>
+<body>
+
+	        <header style="background-color:  #111265">
+            <div class="container-fluid" style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;" color: white; padding-top: 50%; padding-left: 80px">
+                <div class="row">
+                    <div class="col-md-12">
+                        <ul class="list-unstyled" id="head" style="margin-top: 17px;" style="margin-right: 25px;">
+                            <li class="list-item list-inline-item" style="padding-right: 20px">
+                                <a href="home.html">Home</a>
+                            </li>
+                            <li class="list-item list-inline-item" style="padding-right: 20px">
+                                <a href=#>About Us</a>
+                            </li>
+                            <li class="list-item list-inline-item" style="padding-right: 20px">
+                                <a href=#>Programs</a>
+                            </li>
+                            <li class="list-item list-inline-item" style="padding-right: 20px">
+                                <a href=#>Blogs</a>
+                            </li>
+                            <li class="list-item list-inline-item" style="padding-right: 700px">
+                                <a href=#>Contacts</a>
+                            </li>
+                            <li class="list-item list-inline-item" style="padding-right: 20px">
+                                <a href="SIGNIN.html">Sign In</a>
+                            </li>
+                            <li class="list-item list-inline-item" style="padding-right: 20px">
+                                <a href="SIGNUP.html">SIgn Up</a>
+                            </li>
+                        </ul> 
+                    </div>
+                </div>
+            </div>
+        </header>
+		
+		<section style="background-color: #ededed" class="pb-5">
+		  <!-- div class="edge-header deep-purple" style="background-color: ##000144" -->
+			<div style="background-color: #000144;">
+				<div class="container-fluid" style="font-family: 'Roboto Condensed'; color: white; padding-top: 80px; padding-bottom:150px;  padding-left: 80px; padding-right: 100px;">
+					<strong><div class="row">
+						<div class="col-md-6">
+							<img src="img/logo.png" alt="">
+						</div>
+						<div class="col-md-6 rectangle" style="background-color: #111265; padding-right: 80px" >
+						</div>
+					</div>
+					</strong>
+				</div>
+			</div>
+		  
+		  </div>
+			
+		 
+          </div>
+            <!-- Main Container -->
+		  <div class="container free-bird" style="font-family: 'Roboto Condensed';">
+			<div class="row">
+			  <div class="col-md-8 col-lg-7 mx-auto float-none white z-depth-1 py-2 px-2">
+
+				<div class="card-body" style="height: 550px;" >
+
+                  <!--Body-->
+                  <!-- <div class="login"> -->
+                    <form method="post" action="welcome.html" class="login100-form validate-form" onsubmit="return !!(validate()&validatePassword()) " >
+                        <div class="heading" >
+                            <h1>Sign Up</h1>
+                        </div>
+        
+                   
+                    <input type="text" name="name" data-validate = "Enter your name" placeholder="name" required="required" /> <br> 
+                    <br>                   
+                        <input id="email" type="text" name="email" data-validate = "Enter Email" placeholder="email" required="required" />
+                        <label for="error" id="error"></label><br> <br>
+                       
+                        <input id="phonenum" type="tel"  placeholder="Phone Number (format: xxx-xxx-xxxx)" pattern="^\d{3}-\d{3}-\d{4}$"required > <br> <br>
+                        <input type="text" id="pwd"  placeholder="password" onkeyup="validatePassword();"/><span id="msg"></span> <br>
+                        <!-- <script>
+                                  
+                        </script> -->
+                       
+                        
+                     
+                
+            
+                        
+                       
+                            
+                   <br>  
+                        
+                        <button id="submit" href="index.html" class="btn btn-primary btn-block btn-large">SignUp.</button>
+                        <ul class="login-more p-t-190">
+                           
+            
+                            <li>
+                                <span class="txt1">
+                                    Alreay have an account?
+                                </span>
+            
+                                <a href="SIGNIN.html" class="txt2">
+                                    Sign In
+                                </a>
+                            </li>
+                        </ul>
+                    </form>
+                  <!-- </div> -->
+				
+
+				</div>
+
+
+			  </div>
+			</div>
+		  </div>
+          
+		  <!-- /.Main Container -->
+			
+		
+		</section>
+		<section style="background-color: #ededed;" class="pb-5">
+			<h3 style="font-family: 'Roboto Condensed'; color: #adadad; margin-left: 430px;"><strong>Follow Us</strong></h3>
+			<img src="c1.png" height="24px" width="180px" style="margin-left: 430px;"/>
+		</section>
+
+  <!-- jQuery -->
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Your custom scripts (optional) -->
+  <script type="text/javascript"></script>
+  <script src="test.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+
+</body>
+</html>
